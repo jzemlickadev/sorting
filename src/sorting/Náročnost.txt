@@ -1,0 +1,31 @@
+Counting sort algoritmus
+
+Jedná se o algoritmus který jehož náročnost se obecně udává jako O(n+k).
+
+Kde N je počtem prvků a K je počet různých hodnot kterých nabývájí hodnoty v poli (rozpětí).
+
+V případě že K=N je náročnost pouze O(N) tedy požadovaná lineární složitost (současná konfigurace).
+
+S pomocí jiných třídicích algoritmů požadované složitosti nelze dosáhnout leda v krajních a velmi omezených případech (například pokud by pole mělo pouze 1x prvek nebo málo prvků a nahodně by došlo ke generování čísel za sebou
+ ale jednalo by se o velmi krajní a specifický případ který by nebyl representativní a neodpovídal by zadaní).U jiných třidících algoritmu by šlo teoreticky dosáhnout složitosti O(n log n).
+
+Důkazem složitosti je analýza kodu ve které se například nenachazí žadný vnořený cyklus a lze tedy vyvodit složitost O(N+K) až O(N).
+
+Momentalně je algoritmus nastaven tak aby počet prvků odpovídal i maximalní hodnotě prvků hodnoty maxElementValue a arraySize jsou rovny.
+
+Využitý algoritmus se od ostatních liší zejména tím že neporovnává prvky mezi sebou ale spiše počítá vyskyty jednotlivých hodnot na základě kterých poslezé dokáže pole správně seřadit.
+
+
+Ohledem důkazu složitosti lze vypsat všechny cykly které se v aplikaci nachází a napsat jejich složitost
+
+řádek 57 O(N)
+řádek 61 O(K)=O(N) - iterace od 0 do maximální hodnoty prvku v našem případě opět N
+řádek 72 O(N) - iterace od posledního elementu v poli k prvnímu.
+
+Paměťově je třeba vytvořit další pole o velikosti N (K) prvků tak aby bylo možno poznačit kolikrát se jednotlivé číslo opakuje.
+
+
+
+
+
+
